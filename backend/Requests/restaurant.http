@@ -5,11 +5,11 @@ Content-Type: application/json
 
 {
     "userType":"restaurant",
-    "username":"vikas",
-    "password":"vikas",
-    "email":"vikas@gmail.com",
-    "restaurantname":"Mefhfil",
-    "location":"Hyderabad"
+    "username":"adharsh1",
+    "password":"adharsh1",
+    "email":"adharsh1@gmail.com",
+    "restaurantname":"pistahouse",
+    "location":"KPHB"
 }
 
 ###
@@ -19,6 +19,23 @@ Content-Type: application/json
 
 {
     "userType":"restaurant",
-    "username":"vikas",
-    "password":"vikas"
+    "username":"adharsh1",
+    "password":"adharsh1"
 }
+
+###
+//Adding menu-item by restaurant
+POST http://localhost:3000/restaurantapi/menu
+Content-Type: application/json
+
+{
+    "image":"https://spicecravings.com/wp-content/uploads/2020/10/Egg-Biryani-Featured-1.jpg",
+    "title":"Egg Biryani",
+    "category":"Biryani",
+    "price":"500",
+    "restaurantname":"pistahouse"
+}
+
+###
+//Getting menu items by restaurant name
+GET http://localhost:3000/restaurantapi/menu/pistahouse

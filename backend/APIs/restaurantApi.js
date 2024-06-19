@@ -60,5 +60,24 @@ restaurantApp.post('/login',expressAsyncHandler(async(req,res)=>{
     }
 }))
 
+//adding menu items by restaurant
+restaurantApp.post('/menu',expressAsyncHandler(async(req,res)=>{
+    //get the body
+    const menuitem=req.body;
+    //adding to menucollection
+    await menuCollection.insertOne(menuitem);
+    res.send({message:"item added"});
+    
+}))
+
+//displaying menu items by restaurant name
+restaurantApp.get('/menu/:restaurantname',expressAsyncHandler(async(req,res)=>{
+    const restaurantname=req.params.restaurantname;
+    //get menu items of  restaurant
+    const itemsList=await menuCollection.find({ restaurantname: restaurantname }).toArray();
+   //send the response
+   res.send({message:"List of items",payload:itemsList}); 
+}))
+
 
 module.exports=restaurantApp;

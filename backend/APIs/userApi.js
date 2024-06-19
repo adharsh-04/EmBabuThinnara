@@ -13,7 +13,7 @@ const bcryptjs=require('bcryptjs');
 //get usersCollection from server.js to add the data
 userApp.use((req,res,next)=>{
     usersCollection=req.app.get('usersCollection');
-    // Collection=req.app.get('articlesCollection');
+    menuCollection=req.app.get('menuCollection');
     next();
 })
 require('dotenv').config();
@@ -68,4 +68,11 @@ userApp.post('/login',expressAsyncHandler(async(req,res)=>{
     }
 }))
 
+
+//getting menu from all restaurants
+userApp.get('/menu',expressAsyncHandler(async(req,res)=>{
+    let listOfItems=await menuCollection.find().toArray();
+    res.send({message:"List of Items",payload:listOfItems});
+
+}))
 module.exports=userApp;

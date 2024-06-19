@@ -18,3 +18,7 @@ Content-Type: application/json
     "username":"ravi",
     "password":"ravi"
 }
+
+###
+//getting menus from all restaurants
+GET http://localhost:3000/userapi/menu
