@@ -1,0 +1,24 @@
+//Author registration route
+###
+POST http://localhost:3000/restaurantapi/owner
+Content-Type: application/json
+
+{
+    "userType":"restaurant",
+    "username":"vikas",
+    "password":"vikas",
+    "email":"vikas@gmail.com",
+    "restaurantname":"Mefhfil",
+    "location":"Hyderabad"
+}
+
+###
+//Author login route
+POST http://localhost:3000/restaurantapi/login
+Content-Type: application/json
+
+{
+    "userType":"restaurant",
+    "username":"vikas",
+    "password":"vikas"
+}
