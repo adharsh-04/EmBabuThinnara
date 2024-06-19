@@ -30,9 +30,9 @@ Content-Type: application/json
 
 {
     "image":"https://spicecravings.com/wp-content/uploads/2020/10/Egg-Biryani-Featured-1.jpg",
-    "title":"Egg Biryani",
-    "category":"Biryani",
-    "price":"500",
+    "title":"Chicken Pizza",
+    "category":"Pizza",
+    "price":"450",
     "restaurantname":"pistahouse"
 }
 

@@ -22,3 +22,7 @@ Content-Type: application/json
 ###
 //getting menus from all restaurants
 GET http://localhost:3000/userapi/menu
+
+###
+//getting menu items by category
+GET http://localhost:3000/userapi/menu/Pizza

@@ -1,0 +1,59 @@
+
+
+#container{
+    /* background-image: url("https://static.vecteezy.com/system/resources/thumbnails/034/235/686/small_2x/burger-and-chips-hamburger-and-french-fries-in-red-paper-box-fast-food-on-red-background-photo.jpg");
+    background-size: cover; */
+    background-repeat: no-repeat;
+    height: calc(100vh-50px);
+}
+
+#image1{
+    
+    width: 100%;
+    height: 100%;
+}
+
+#overlay{
+    position: absolute;
+    top: 30%;
+    left: 40%;
+}
+
+#overlay-1{
+    font-size: 5rem;
+}
+#overlay-2{
+    font-size: 3rem;
+}
+#overlay-3{
+    position: absolute;
+    top: 70%;
+    left: 30%;
+}
+#overlay-4{
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    top: 100%;
+    left: 55%;
+    color: white;
+}
+
+#btn{
+    background-color: #0C1844;
+}
+#overlay-5{
+    position: absolute;
+   
+  
+    top: 55%;
+    left: 45%;
+   
+    color: white;
+   
+}
+
+#search{
+    width: 500px;
+    height: 50px;
+}

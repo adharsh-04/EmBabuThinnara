@@ -75,4 +75,11 @@ userApp.get('/menu',expressAsyncHandler(async(req,res)=>{
     res.send({message:"List of Items",payload:listOfItems});
 
 }))
+
+//getting menu from all restaurants by category
+userApp.get('/menu/:category',expressAsyncHandler(async(req,res)=>{
+    let category=req.params.category;
+    let categoryitems=await menuCollection.find({category:category}).toArray();
+    res.send({message:"similar Items",payload:categoryitems});
+}))
 module.exports=userApp;
